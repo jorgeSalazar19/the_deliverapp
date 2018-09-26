@@ -83,11 +83,24 @@ WSGI_APPLICATION = 'the_deliverapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'deliverapp',
+#         }
+# }
+
+#DE ESTA FORMA YO CARGO LA BASE DE DATOS NO ME LA VAYA A ELIMINAR COMENTALA SI ALGO
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'deliverapp',
-        }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Deliverapp',
+        'USER' : 'postgres',
+        'PASSWORD': '16ffd13529',
+        'HOST': 'localhost',
+        'PORT' : '5432',
+    }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=500)  
