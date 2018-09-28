@@ -58,3 +58,33 @@ class Request(models.Model):
     class Meta:
         verbose_name = "Solicitud"
         verbose_name_plural = "Solicitudes"
+
+
+class observation(models.Model):
+
+
+    name=models.CharField(
+        'Nombre',
+        max_length=40
+    )
+    mail=models.EmailField(
+        'Correo Electronico',
+    )
+    subject=models.CharField(
+        'Asunto',
+        max_length=40
+    )
+    message=models.TextField(
+        'Mensaje',
+        max_length=300
+    )
+
+
+    class Meta:
+        verbose_name='Comentario'
+        verbose_name_plural='Comentarios'
+
+
+    def __str__(self):
+        return '%s %s' % (self.name, self.mail)
+
