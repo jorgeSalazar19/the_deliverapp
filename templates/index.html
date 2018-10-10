@@ -9,7 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>landing</title>
+    <title>Deliverapp</title>
+    <link rel="icon" href="{% static 'img/logo.jpeg' %}" type="image/x-icon"> 
 
     <!-- Bootstrap Core CSS -->
     <link href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -19,48 +20,51 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
 
+
     <!-- Custom CSS -->
-    <link href="{% static 'css/stylish-portfolio.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+
 
   </head>
 
   <body id="page-top">
 
+
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#">
-      <i class="fas fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Deliverapp</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Que somos</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#services">Que ofrecemos</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Quienes somos</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+</nav>
 
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">Stylish Portfolio</h1>
-        <h3 class="mb-5">
-          <em>A Free Bootstrap Theme by Start Bootstrap</em>
+        <h1 class="mb-1 text-white">Deliverapp</h1>
+        <h3 class="mb-5 text-white">
+          <em>¿Lo necesitas? te lo llevamos</em>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        <a class="btn btn-warning btn-xl js-scroll-trigger" href="#about">¿Quienes somos?</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -70,10 +74,9 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-            <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-              <a href="https://unsplash.com/">Unsplash</a>!</p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+            <h1>Deliverapp es un emprendimiento pereirano</h1>
+            <p class="lead mb-5"> Que va cambiar tu forma de enviar y recibir  tus objetos y comida a través de una aplicación</p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Qué Ofrecemos</a>
           </div>
         </div>
       </div>
@@ -83,59 +86,43 @@
     <section class="content-section bg-primary text-white text-center" id="services">
       <div class="container">
         <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Services</h3>
-          <h2 class="mb-5">What We Offer</h2>
+          <h3 class="text-secondary mb-0">Nuestros</h3>
+          <h2 class="mb-5">Servicios</h2>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
+              <img class="img-fluid" src="{% static 'img/key.png' %}" alt="">
             </span>
             <h4>
-              <strong>Responsive</strong>
+              <strong>Transportamos</strong>
             </h4>
-            <p class="text-faded mb-0">Looks great on any screen size!</p>
+            <p class="text-faded mb-0">Objestos Pequeños</p>
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
+            <img class="img-fluid mt-4" src="{% static 'img/laptop.png' %}" alt="">
             <h4>
-              <strong>Redesigned</strong>
+              <strong>Transportamos</strong>
             </h4>
-            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+            <p class="text-faded mb-0">Objetos Medianos</p>
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
+            <img class="img-fluid mt-4" src="{% static 'img/food.png' %}" alt="">
             </span>
             <h4>
-              <strong>Favorited</strong>
+              <strong>Transportamos</strong>
             </h4>
-            <p class="text-faded mb-0">Millions of users
-              <i class="fas fa-heart"></i>
-              Start Bootstrap!</p>
+            <p class="text-faded mb-0">Comida
+              <i class="fas fa-heart"></i></p>
           </div>
           <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-mustache"></i>
+            <img class="img-fluid mt-4" src="{% static 'img/delivery_man1.png' %}" alt="">
             </span>
             <h4>
-              <strong>Question</strong>
+              <strong>Ofrecemos</strong>
             </h4>
-            <p class="text-faded mb-0">I mustache you a question...</p>
+            <p class="text-faded mb-0">Empleo</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Callout -->
-    <section class="callout">
-      <div class="container text-center">
-        <h2 class="mx-auto mb-5">Welcome to
-          <em>your</em>
-          next website!</h2>
-        <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
       </div>
     </section>
 
@@ -143,74 +130,63 @@
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
-          <h3 class="text-secondary mb-0">Portfolio</h3>
-          <h2 class="mb-5">Recent Projects</h2>
+          <h3 class="text-secondary mb-0">¿Quienes Somos?</h3>
+          <h2 class="mb-5">Nuestro Equipo</h2>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Stationary</h2>
-                  <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                  <h2>Jorge Salazar</h2>
+                  <p class="mb-0">Desarrollador Backend</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/portfolio-1.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Jorge.jpg' %}" alt="">
             </a>
           </div>
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Ice Cream</h2>
-                  <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                  <h2>Santiago Gómez</h2>
+                  <p class="mb-0">Desarrolador y maquetador movil</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/portfolio-2.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Santiago.jpg' %}" alt="">
             </a>
           </div>
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Strawberries</h2>
-                  <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                  <h2>Iván Nieves</h2>
+                  <p class="mb-0">Desarrollador Frontend</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/portfolio-3.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Ivan.jpg' %}" alt="">
             </a>
           </div>
           <div class="col-lg-6">
             <a class="portfolio-item" href="#">
               <span class="caption">
                 <span class="caption-content">
-                  <h2>Workspace</h2>
-                  <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                  <h2>Fernan Cañas</h2>
+                  <p class="mb-0">Publicista y validador</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/portfolio-4.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Fernan.jpg' %}" alt="">
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="content-section bg-primary text-white">
+    <!-- Contact -->
+    <section class="content-section bg-primary text-white" id="contact">
       <div class="container text-center">
-        <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-        <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-        <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+        <h2 class="mb-4">Acá van los comentarios</h2>
       </div>
-    </section>
-
-    <!-- Map -->
-    <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-      <br/>
-      <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-      </small>
     </section>
 
     <!-- Footer -->
@@ -218,22 +194,22 @@
       <div class="container">
         <ul class="list-inline mb-5">
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/Deliverapp-236340133697549/">
               <i class="icon-social-facebook"></i>
             </a>
           </li>
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#">
+            <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/Deliverapp2">
               <i class="icon-social-twitter"></i>
             </a>
           </li>
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white" href="#">
-              <i class="icon-social-github"></i>
+            <a class="social-link rounded-circle text-white" href="https://www.instagram.com/deliverappp/">
+              <i class="icon-social-instagram"></i>
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Your Website 2018</p>
+        <p class="text-muted small mb-0">Copyright &copy; Deliverapp 2018</p>
       </div>
     </footer>
 
