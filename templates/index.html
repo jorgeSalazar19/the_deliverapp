@@ -142,7 +142,7 @@
                   <p class="mb-0">Desarrollador Backend</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/Jorge.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Jorge1.jpg' %}" alt="">
             </a>
           </div>
           <div class="col-lg-6">
@@ -153,7 +153,7 @@
                   <p class="mb-0">Desarrolador y maquetador movil</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/Santiago.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Santiago1.jpg' %}" alt="">
             </a>
           </div>
           <div class="col-lg-6">
@@ -164,7 +164,7 @@
                   <p class="mb-0">Desarrollador Frontend</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/Ivan.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Ivan1.jpg' %}" alt="">
             </a>
           </div>
           <div class="col-lg-6">
@@ -175,7 +175,7 @@
                   <p class="mb-0">Publicista y validador</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{% static 'img/Fernan.jpg' %}" alt="">
+              <img class="img-fluid" src="{% static 'img/Fernan1.jpg' %}" alt="">
             </a>
           </div>
         </div>
@@ -183,22 +183,39 @@
     </section>
 
     <!-- Contact -->
-    <section class="content-section bg-primary text-white" id="contact">
-      <div class="container text-center">
-        {% if mensaje.0 %}
-          <div class="alert alert-success" role="alert">
-            <strong>Muchas Gracias por su comentario es de gran ayuda para nuestro equipo!</strong>
+        <section class="content-section bg-primary text-white" id="contact">
+          <div class="container text-center">
+            {% if mensaje.0 %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Gracias por tu comentario</strong> Es de gran ayuda para nuestro equipo
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endif %}
+            <form method="POST">{% csrf_token %}
+             <h3 class="text-secondary mb-5">Comentarios</h3>
+             <div class="row justify-content-center">
+              <div class="col-sm-8 col-12">
+                <input type="text" class="form-control" placeholder="Nombre" aria-describedby="inputGroup-sizing-lg" required name="name">
+              </div>
+              <div class="col-sm-8 col-12 mt-2">
+                <input type="text" class="form-control" placeholder="Correo" aria-describedby="inputGroup-sizing-lg" required name="mail">
+              </div>
+              <div class="col-sm-8 col-12 mt-2">
+                <input type="text" class="form-control" placeholder="Asunto" aria-describedby="inputGroup-sizing-lg" required name="subject">
+              </div>
+              <div class="col-sm-8 col-12 mt-2">
+                <form action="" class="form_comentarios d-flex justify-content-end flex-wrap">
+                  <textarea class="form-control"  placeholder="Mensaje" rows="5" required name="message"></textarea>
+                </form>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button  type="submit" class=" btn btn-warning">Enviar</button>
+              </div>
+             </div>
+            </form>
           </div>
-        {% endif %}
-        <form method="POST">{% csrf_token %}
-         <h3 class="text-secondary mb-0">Comentarios</h3>
-          <input type="text" placeholder="Nombre" required  name="name">
-          <input type="email" placeholder="Correo" required name="mail">
-          <input type="text" placeholder="Asunto" required name="subject">
-          <input type="text" placeholder="Mensaje" required name="message">
-          <button  type="submit" class="bg-primary">Enviar</button>
-        </form>
-      </div>
     </section>
 
     <!-- Footer -->
