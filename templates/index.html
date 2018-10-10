@@ -185,7 +185,19 @@
     <!-- Contact -->
     <section class="content-section bg-primary text-white" id="contact">
       <div class="container text-center">
-        <h2 class="mb-4">Acá van los comentarios</h2>
+        {% if mensaje.0 %}
+          <div class="alert alert-success" role="alert">
+            <strong>Muchas Gracias por su comentario es de gran ayuda para nuestro equipo!</strong>
+          </div>
+        {% endif %}
+        <form method="POST">{% csrf_token %}
+         <h3 class="text-secondary mb-0">Comentarios</h3>
+          <input type="text" placeholder="Nombre" required  name="name">
+          <input type="email" placeholder="Correo" required name="mail">
+          <input type="text" placeholder="Asunto" required name="subject">
+          <input type="text" placeholder="Mensaje" required name="message">
+          <button  type="submit" class="bg-primary">Enviar</button>
+        </form>
       </div>
     </section>
 

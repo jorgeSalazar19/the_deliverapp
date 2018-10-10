@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import (
-    Request
+from .models import ( 
+    observation
 )
 
-@admin.register(Request)
-class RequestAdmin(admin.ModelAdmin):
-	model = Request
-	list_display = ['willing_pay']
+@admin.register(observation)
+class observationAdmin(admin.ModelAdmin):
+    model = observation
+    list_display = ['name', 'mail', 'subject', 'message']
