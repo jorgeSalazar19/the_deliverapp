@@ -15,7 +15,17 @@ TYPE_CHOICES = (
     (OTHER, 'Otro'),
 )
 
-    
+PENDING = 'pendiente'
+DONE = 'realizada'
+PROCESS = 'proceso'
+
+STATE_CHOICES = (
+    (PENDING, 'Pendiente'),
+    (PROCESS, 'En proceso'),
+    (DONE, 'Realizada'),
+)
+
+
 class Request(models.Model):
 
     customer = models.ForeignKey(
@@ -50,14 +60,51 @@ class Request(models.Model):
         null=False,
         blank=True
     )
+    state = models.CharField(
+        'Estado',
+        max_length=20,
+        choices=STATE_CHOICES,
+        default = PENDING
+    )
 
     def data_customer(self):
         return str(self.customer)
 
+    def __str__(self):
+        return '%s %s %s' % (self.customer, ',',  self.type)
 
     class Meta:
         verbose_name = "Solicitud"
         verbose_name_plural = "Solicitudes"
+
+class RequestAnswer(models.Model):
+
+    delivery = models.ForeignKey(
+        Delivery,
+        on_delete=models.CASCADE,
+        verbose_name='Repartidor'
+    )
+    request = models.ForeignKey(
+        Request,
+        on_delete=models.CASCADE,
+        verbose_name='Solicitud'
+    )
+    offer_price = models.CharField(
+        'Precio de oferta',
+        max_length=50
+    )
+    description = models.TextField(
+        'Descripción de oferta',
+        max_length=200
+    )
+    state = models.CharField(
+        'Estado',
+        max_length=20,
+        choices=STATE_CHOICES
+    )
+
+    def data_delivery(self):
+        return str(self.delivery)
 
 
 class observation(models.Model):

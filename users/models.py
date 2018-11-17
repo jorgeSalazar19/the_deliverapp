@@ -103,4 +103,4 @@ class Delivery(models.Model):
 
 
     def __str__(self):
-        return '%s %s %s' % (self.user.username, '--', self.document_number)
+        return '%s %s %s' % (self.user.first_name, self.cellphone, self.document_number)
